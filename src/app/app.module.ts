@@ -3,19 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClientesComponent } from './tienda/clientes/clientes.component';
-import { ArticulosComponent } from './tienda/articulos/articulos.component';
-import { ComprasComponent } from './tienda/compras/compras.component';
 import { TiendaModule } from './tienda/tienda.module';
+import { MenuModule } from './shared/menu.module';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TiendaModule
+    TiendaModule,
+    MenuModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
