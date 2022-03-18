@@ -4,6 +4,9 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ComprasComponent } from './compras/compras.component';
 import { FormsModule } from '@angular/forms';
+import { CrearCompraComponent } from './compras/crear-compra/crear-compra.component';
+import { EditarCompraComponent } from './compras/editar-compra/editar-compra.component';
+import { VerCompraComponent } from './compras/ver-compra/ver-compra.component';
 
 
 
@@ -11,7 +14,10 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ArticulosComponent,
     ClientesComponent,
-    ComprasComponent
+    ComprasComponent,
+    CrearCompraComponent,
+    EditarCompraComponent,
+    VerCompraComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +26,10 @@ import { FormsModule } from '@angular/forms';
   exports:[
     ArticulosComponent,
     ClientesComponent,
-    ComprasComponent
+    ComprasComponent,
+    CrearCompraComponent,
+    EditarCompraComponent,
+    VerCompraComponent
   ]
 })
 export class TiendaModule { }

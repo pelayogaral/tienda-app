@@ -1,0 +1,38 @@
+<form (ngSubmit)="agregarCompra()">
+  <div class="card mb-2">
+    <h1 class="card-header">Nueva compra</h1>
+    <div class="card-body">
+      <div class="row m-2">
+  <label class="col-sm-4 col-form-label" for="numero1">Cliente</label>
+    <div class="col-sm-8">
+      <select class="form-select" id="cliente">
+        <option name="cliente" *ngFor="let item of clientesService;let i=index" value="{{i}}">{{item.nombre}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row m-2">
+    <label class="col-sm-4 col-form-label" for="numero2">Articulo</label>
+    <div class="col-sm-8">
+      <select class="form-select" id="articulo">
+        <option name="articulo" *ngFor="let item of articulosService;let i=index" value="{{i}}">{{item.nombre}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row m-2">
+    <label class="col-sm-4 col-form-label" for="numero2">Fecha</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" name="fecha" placeholder="Fecha" [(ngModel)]="nuevo.fecha">
+    </div>
+  </div>
+  <div class="row m-2">
+    <label class="col-sm-4 col-form-label" for="numero2">Unidades</label>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" name="unidades" placeholder="Unidades"  [(ngModel)]="nuevo.unidades">
+    </div>
+  </div>
+</div>
+  <div class="card-footer text-center">
+    <button type="submit" class="btn btn-success">Agregar</button>
+  </div>
+  </div>
+  </form>

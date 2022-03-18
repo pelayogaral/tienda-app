@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Compra } from "../interfaces/compra.interface";
+import { Component, Input, OnInit } from '@angular/core';
+import { ComprasService } from 'src/app/service/compras.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-compras',
   templateUrl: './compras.component.html',
@@ -8,41 +9,46 @@ import { Compra } from "../interfaces/compra.interface";
 })
 export class ComprasComponent implements OnInit {
 
-  compras:Compra[]=[
-    {
-      cliente:'Pelayo',
-      articulo:'Pelota',
-      fecha: new Date(),
-      unidades:10
-    },
-    {
-      cliente:'Pablo',
-      articulo:'Camion',
-      fecha: new Date(),
-      unidades:7
-    },{
-      cliente:'Rafael',
-      articulo:'Ordenador',
-      fecha: new Date(),
-      unidades:22
-    },
-  ];
-  nuevo:Compra={
-      cliente:'',
-      articulo:'',
-      fecha: new Date(),
-      unidades:0
-  };
+
+  // @Input() compras:Compra[]=[];
+  // nCliente:Cliente=
+  //   {codCliente: 0,
+  //     nombre: '',
+  //     empresa: '',
+  //     puesto: '',
+  //     cp: 0,
+  //     provincia: '',
+  //     telefono: 0,
+  //     fechaNacimiento: new Date()
+  //   }
+  // ;
+  // nArticulo:Articulo=
+  //     {
+  //       codArticulo:0,
+  //       nombre:"",
+  //       descripcion:"",
+  //       precioPorUnidad:0,
+  //       stock:0,
+  //       stockSeguridad:0,
+  //       imagen:""
+  //     };
+  // nuevo:Compra=
+  // {
+  //     cliente:this.nCliente,
+  //     articulo:this.nArticulo,
+  //     fecha: new Date(),
+  //     unidades:0
+  // };
   editar:boolean=false;
   crear:boolean=false;
   ver:boolean=false;
-  constructor() { }
+  constructor(private compraSerivicio:ComprasService, private route:Router) { }
 
   ngOnInit(): void {
   }
   borrarCompra(index:number): void
   {
-    this.compras.splice(index, 1);
+    this.compraSerivicio.eliminarCompra(index);
   }
   crearVista():void
   {
@@ -55,8 +61,15 @@ export class ComprasComponent implements OnInit {
     this.crear = false;
     this.editar = false;
     this.ver = false;
+    this.route.navigate(['/clientes']);
   }
-  agregarCompra():void{
-
+  get comprasService(){
+    return this.compraSerivicio.compras;
+  }
+  get clientesService(){
+    return this.compraSerivicio.clientes;
+  }
+  get articulosService(){
+    return this.compraSerivicio.articulos;
   }
 }

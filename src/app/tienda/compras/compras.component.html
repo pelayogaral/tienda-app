@@ -1,8 +1,8 @@
-
-<div style="float:right;">
-<button class="btn btn-success" (click)="crearVista()"><i class="bi bi-plus-circle" ></i> Nueva compra</button>
-</div>
+<div class="container mt-2">
 <div id="tabla" *ngIf="(!editar && !crear && !ver)">
+  <div style="float:right;">
+    <button class="btn btn-success" (click)="crearVista()"><i class="bi bi-plus-circle" ></i> Nueva compra</button>
+    </div>
 <table  class="table table-hover">
   <thead>
     <tr>
@@ -15,10 +15,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of compras;let i=index">
+    <tr *ngFor="let item of comprasService;let i=index">
       <td>{{i+1}}</td>
-      <td>{{item.cliente}}</td>
-      <td>{{item.articulo}}</td>
+      <td>{{item.cliente.nombre}}</td>
+      <td>{{item.articulo.nombre}}</td>
       <td>{{item.fecha | date: 'dd/MM/yyyy'}}</td>
       <td>{{item.unidades}}</td>
       <td>
@@ -34,24 +34,19 @@
 </div>
 <div id="crear" *ngIf="(!editar && crear && !ver)">
   <div class="form-group row">
-    <form (ngSubmit)="agregarCompra()">
-    <label class="col-sm-2 col-form-label" for="numero1">Numero 1</label>
-    <div class="col-sm-4">
-    <input class="form-control"type="number" name="numero1" placeholder="Introduce el numero 1" [(ngModel)]="nuevo.cliente">
-    </div>
-    <label class="col-sm-2 col-form-label" for="numero2">Numero 2</label>
-    <div class="col-sm-4">
-    <input class="col-4" type="number" name="numero2" placeholder="Introduce el numero 2" class="form-control" [(ngModel)]="nuevo.articulo">
-    </div>
-    <button type="submit" class="btn btn-success" (click)="salir()">Agregar</button>
-    </form>
-    <button type="button" (click)="salir()">Cancelar</button>
-</div>
+<app-crear-compra>
 
+</app-crear-compra>
+
+</div>
+<div class="text-center">
+  <button class="btn btn-success" (click)="salir()">Salir</button>
+</div>
 </div>
 <div id="editar" *ngIf="(editar && !crear && !ver)">
 
 </div>
 <div id="ver" *ngIf="(!editar && !crear && ver)">
 
+</div>
 </div>
