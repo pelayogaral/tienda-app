@@ -1,1 +1,22 @@
-<p>ver-compra works!</p>
+<h2>
+    Datos de la compra
+  </h2><hr>
+  <div class="grid text-center">
+    <div class="row justify-content-center">
+  <div class="card col-6 ">
+    <div class="card-header">
+      <h4 class="card-title">Compra realizada por el cliente {{compras.cliente.nombre}}</h4>
+    </div>
+    <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <img class="card-img-top" src="{{compras.articulo.imagen}}"></li>
+      <li class="list-group-item">Cliente: {{compras.cliente.nombre}}</li>
+      <li class="list-group-item">Articulo: {{compras.articulo.nombre}}</li>
+      <li class="list-group-item">Fecha: {{compras.fecha | date:'dd/MM/yyyy'}}</li>
+      <li class="list-group-item">Numero: {{compras.unidades | number}}</li>
+    </ul>
+  </div>
+  </div>
+</div>
+</div>

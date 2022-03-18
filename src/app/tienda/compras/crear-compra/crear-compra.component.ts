@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComprasService } from 'src/app/service/compras.service';
 import { Compra } from '../../interfaces/compra.interface';
 
@@ -8,7 +9,7 @@ import { Compra } from '../../interfaces/compra.interface';
 })
 export class CrearCompraComponent implements OnInit {
 
-  constructor(private compraServicio:ComprasService) { }
+  constructor(private compraServicio:ComprasService, private route:Router) { }
   @Input() compras:Compra[]=[];
   nuevo:Compra={
     cliente: this.compraServicio.clientes[0],
@@ -33,6 +34,7 @@ export class CrearCompraComponent implements OnInit {
     this.nuevo.cliente = this.compraServicio.clientes[Number(valCliente)];
     this.nuevo.articulo = this.compraServicio.articulos[Number(valArticulo)];
     this.compraServicio.agregarCompra(this.nuevo);
+    this.route.navigate(['']);
   }
 
 }

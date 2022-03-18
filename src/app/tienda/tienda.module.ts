@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { CrearCompraComponent } from './compras/crear-compra/crear-compra.component';
 import { EditarCompraComponent } from './compras/editar-compra/editar-compra.component';
 import { VerCompraComponent } from './compras/ver-compra/ver-compra.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -21,7 +22,8 @@ import { VerCompraComponent } from './compras/ver-compra/ver-compra.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   exports:[
     ArticulosComponent,

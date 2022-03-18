@@ -1,7 +1,7 @@
 <div class="container mt-2">
 <div id="tabla" *ngIf="(!editar && !crear && !ver)">
   <div style="float:right;">
-    <button class="btn btn-success" (click)="crearVista()"><i class="bi bi-plus-circle" ></i> Nueva compra</button>
+    <a class="btn btn-success" routerLink="crear-compra"><i class="bi bi-plus-circle" ></i> Nueva compra</a>
     </div>
 <table  class="table table-hover">
   <thead>
@@ -23,8 +23,8 @@
       <td>{{item.unidades}}</td>
       <td>
         <div class="btn-group">
-        <button class="btn btn-primary btn-sm m-1"><i class="bi bi-search"></i></button>
-        <button class="btn btn-info btn-sm m-1"><i class="bi bi-pencil"></i></button>
+        <button class="btn btn-primary btn-sm m-1" [routerLink]="['/ver-compra',i]"><i class="bi bi-search"></i></button>
+        <a class="btn btn-info btn-sm m-1" [routerLink]="['/editar-compra',i]"><i class="bi bi-pencil"></i></a>
         <button class="btn btn-danger btn-sm m-1" (click)="borrarCompra(i)"><i class="bi bi-trash"></i></button>
       </div>
       </td>

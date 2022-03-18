@@ -19,7 +19,7 @@ export class ComprasService {
       fechaNacimiento: new Date()
     },
     {
-      codCliente: 1001,
+      codCliente: 1002,
       nombre: 'Elena Nito del Bosque',
       empresa: 'Construcciones el Enanito',
       puesto: 'Carpintero',
@@ -29,7 +29,7 @@ export class ComprasService {
       fechaNacimiento: new Date()
     },
     {
-      codCliente: 1001,
+      codCliente: 1003,
       nombre: 'Perico Los Palotes',
       empresa: 'Empresa de Perico',
       puesto: 'Carnicero',
@@ -99,8 +99,15 @@ export class ComprasService {
   agregarCompra(compra:Compra){
     this._compras.push(compra);
   }
+  editarCompra(id:number, compra:Compra){
+    this._compras[id] == compra;
+  }
   eliminarCompra(index:number){
     this._compras.splice(index, 1);
+  }
+  buscarCompra(id:number):Compra
+  {
+    return this._compras[id];
   }
   constructor() { }
 }
