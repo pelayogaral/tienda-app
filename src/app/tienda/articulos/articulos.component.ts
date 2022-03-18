@@ -52,10 +52,11 @@ export class ArticulosComponent implements OnInit {
   agregarArticulo(articulos:Articulo){
     this.articulos.push(this.articulo);
   }
+  /*
   editarArticulo(index:number){
     this.articulos.indexOf(this.articulos,index);
   }
-
+*/
   eliminarArticulo(index:number){
     this.articulos.splice(index,1);
   }
