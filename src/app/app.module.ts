@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ClientesComponent } from './tienda/clientes/clientes.component';
 import { ArticulosComponent } from './tienda/articulos/articulos.component';
 import { ComprasComponent } from './tienda/compras/compras.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
