@@ -1,0 +1,12 @@
+<h3>Editar artículo</h3>
+    <hr>
+    <form method="post" (ngSubmit)="editarArticulo(i)">
+      <input type="number" name="codigo" placeholder="Introduce el código de artículo..." [ngModel]="articulos.codArticulo">
+      <input type="text" name="nombre" placeholder="Introduce el nombre del artículo..." [ngModel]="articulos.nombre">
+      <input type="text" name="descripcion" placeholder="Introduce la descripción del artículo..." [ngModel]="articulos.descripcion">
+      <input type="number" name="precio" placeholder="Introduce el precio del artículo..." [ngModel]="articulos.precioPorUnidad">
+      <input type="number" name="stock" placeholder="Introduce el stock del artículo..." [ngModel]="articulos.stock">
+      <input type="number" name="stockSeguridad" placeholder="Introduce el stock de seguridad del artículo..." [ngModel]="articulos.stockSeguridad">
+      <input type="text" name="imagen" placeholder="Introduce una imagen del artículo..." [ngModel]="articulos.imagen">
+      <button type="submit">Editar</button>
+    </form>

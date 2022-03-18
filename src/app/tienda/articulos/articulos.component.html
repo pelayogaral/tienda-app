@@ -1,3 +1,8 @@
+<div style="float:right;">
+
+  <a class="btn btn-success" routerLink="/crear-articulo" routerLinkActive="router-link-active"><i class="bi bi-plus-circle" ></i> Nuevo articulo</a>
+
+  </div>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -11,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of articulos;let i=index">
+    <tr *ngFor="let item of articulo;let i=index">
       <td>{{item.codArticulo}}</td>
       <td>{{item.nombre}}</td>
       <td>{{item.descripcion}}</td>
@@ -19,6 +24,13 @@
       <td>{{item.stock}}</td>
       <td>{{item.stockSeguridad}}</td>
       <td><img style="width:100px;" src="{{item.imagen}}"></td>
+      <td>
+        <div class="btn-group">
+        <button class="btn btn-primary btn-sm m-1" [routerLink]="['/ver-articulo',item.codArticulo]"  ><i class="bi bi-search"></i></button>
+        <button class="btn btn-info btn-sm m-1" [routerLink]="['/editar-articulo',item.codArticulo]"  ><i class="bi bi-pencil"></i></button>
+        <a class="btn btn-danger btn-sm m-1" (click)="borrarArticulo(item.codArticulo)"><i class="bi bi-trash"></i></a>
+      </div>
+      </td>
     </tr>
   </tbody>
 </table>

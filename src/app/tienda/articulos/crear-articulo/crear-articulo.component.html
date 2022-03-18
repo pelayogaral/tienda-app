@@ -1,0 +1,12 @@
+<h3>Agregar artículo</h3>
+    <hr>
+    <form method="post" (ngSubmit)="crearArticulo()">
+      <input type="number" name="codigo" placeholder="Introduce el código de artículo..." [(ngModel)]="articulo.codArticulo">
+      <input type="text" name="nombre" placeholder="Introduce el nombre del artículo..." [(ngModel)]="articulo.nombre">
+      <input type="text" name="descripcion" placeholder="Introduce la descripción del artículo..." [(ngModel)]="articulo.descripcion">
+      <input type="number" name="precio" placeholder="Introduce el precio del artículo..." [(ngModel)]="articulo.precioPorUnidad">
+      <input type="number" name="stock" placeholder="Introduce el stock del artículo..." [(ngModel)]="articulo.stock">
+      <input type="number" name="stockSeguridad" placeholder="Introduce el stock de seguridad del artículo..." [(ngModel)]="articulo.stockSeguridad">
+      <input type="text" name="imagen" placeholder="Introduce una imagen del artículo..." [(ngModel)]="articulo.imagen">
+      <button type="submit">Agregar</button>
+    </form>

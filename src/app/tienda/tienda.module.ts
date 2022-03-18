@@ -12,6 +12,10 @@ import { RouterModule } from '@angular/router';
 import { CrearClienteComponent } from './clientes/crear/crear.cliente.component';
 import { EditarClienteComponent } from './clientes/editar/editar.cliente.component';
 import { VerClienteComponent } from './clientes/ver/ver.cliente.component';
+import { EditarArticuloComponent } from './articulos/editar-articulo/editar-articulo.component';
+import { CrearArticuloComponent } from './articulos/crear-articulo/crear-articulo.component';
+import { VerArticuloComponent } from './articulos/ver-articulo/ver-articulo.component';
+
 
 
 
@@ -25,7 +29,10 @@ import { VerClienteComponent } from './clientes/ver/ver.cliente.component';
     VerCompraComponent,
     CrearClienteComponent,
     EditarClienteComponent,
-    VerClienteComponent
+    VerClienteComponent,
+    EditarArticuloComponent,
+    CrearArticuloComponent,
+    VerArticuloComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +49,10 @@ import { VerClienteComponent } from './clientes/ver/ver.cliente.component';
     VerCompraComponent,
     CrearClienteComponent,
     EditarClienteComponent,
-    VerClienteComponent
+    VerClienteComponent,
+    EditarArticuloComponent,
+    CrearArticuloComponent,
+    VerArticuloComponent
   ]
 })
 export class TiendaModule { }

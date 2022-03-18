@@ -10,9 +10,10 @@ import { ClienteService } from './service/cliente.service';
 import { FormsModule } from '@angular/forms';
 import { ComprasService } from './service/compras.service';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
