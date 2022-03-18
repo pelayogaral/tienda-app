@@ -1,1 +1,57 @@
-<p>compras works!</p>
+
+<div style="float:right;">
+<button class="btn btn-success" (click)="crearVista()"><i class="bi bi-plus-circle" ></i> Nueva compra</button>
+</div>
+<div id="tabla" *ngIf="(!editar && !crear && !ver)">
+<table  class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Cliente</th>
+      <th>Articulo</th>
+      <th>Fecha</th>
+      <th>Unidades</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of compras;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.cliente}}</td>
+      <td>{{item.articulo}}</td>
+      <td>{{item.fecha | date: 'dd/MM/yyyy'}}</td>
+      <td>{{item.unidades}}</td>
+      <td>
+        <div class="btn-group">
+        <button class="btn btn-primary btn-sm m-1"><i class="bi bi-search"></i></button>
+        <button class="btn btn-info btn-sm m-1"><i class="bi bi-pencil"></i></button>
+        <button class="btn btn-danger btn-sm m-1" (click)="borrarCompra(i)"><i class="bi bi-trash"></i></button>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="crear" *ngIf="(!editar && crear && !ver)">
+  <div class="form-group row">
+    <form (ngSubmit)="agregarCompra()">
+    <label class="col-sm-2 col-form-label" for="numero1">Numero 1</label>
+    <div class="col-sm-4">
+    <input class="form-control"type="number" name="numero1" placeholder="Introduce el numero 1" [(ngModel)]="nuevo.cliente">
+    </div>
+    <label class="col-sm-2 col-form-label" for="numero2">Numero 2</label>
+    <div class="col-sm-4">
+    <input class="col-4" type="number" name="numero2" placeholder="Introduce el numero 2" class="form-control" [(ngModel)]="nuevo.articulo">
+    </div>
+    <button type="submit" class="btn btn-success" (click)="salir()">Agregar</button>
+    </form>
+    <button type="button" (click)="salir()">Cancelar</button>
+</div>
+
+</div>
+<div id="editar" *ngIf="(editar && !crear && !ver)">
+
+</div>
+<div id="ver" *ngIf="(!editar && !crear && ver)">
+
+</div>
