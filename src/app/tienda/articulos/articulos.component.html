@@ -1,1 +1,25 @@
-<p>articulos works!</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>CodArticulo</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Precio/unidad</th>
+      <th>Unidades en stock</th>
+      <th>Stock de seguridad</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of articulos;let i=index">
+      <td>{{item.codArticulo}}</td>
+      <td>{{item.nombre}}</td>
+      <td>{{item.descripcion}}</td>
+      <td>{{item.precioPorUnidad}}</td>
+      <td>{{item.stock}}</td>
+      <td>{{item.stockSeguridad}}</td>
+      <td><img style="width:100px;" src="{{item.imagen}}"></td>
+    </tr>
+  </tbody>
+</table>
+
