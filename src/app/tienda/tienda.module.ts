@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ComprasComponent } from './compras/compras.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,7 @@ import { ComprasComponent } from './compras/compras.component';
   ],
   imports: [
     CommonModule,
+    FormsModule
   ],
   exports:[
     ArticulosComponent,

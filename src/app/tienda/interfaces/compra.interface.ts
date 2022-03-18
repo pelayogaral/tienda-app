@@ -1,3 +1,4 @@
+
 export interface Compra
 {
   cliente:string;
