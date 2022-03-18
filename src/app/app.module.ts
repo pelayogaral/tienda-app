@@ -6,17 +6,16 @@ import { AppComponent } from './app.component';
 import { ClientesComponent } from './tienda/clientes/clientes.component';
 import { ArticulosComponent } from './tienda/articulos/articulos.component';
 import { ComprasComponent } from './tienda/compras/compras.component';
+import { TiendaModule } from './tienda/tienda.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent,
-    ArticulosComponent,
-    ComprasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TiendaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
