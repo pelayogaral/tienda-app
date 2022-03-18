@@ -8,6 +8,10 @@ import { CrearCompraComponent } from './compras/crear-compra/crear-compra.compon
 import { EditarCompraComponent } from './compras/editar-compra/editar-compra.component';
 import { VerCompraComponent } from './compras/ver-compra/ver-compra.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
+import { CrearClienteComponent } from './clientes/crear/crear.cliente.component';
+import { EditarClienteComponent } from './clientes/editar/editar.cliente.component';
+import { VerClienteComponent } from './clientes/ver/ver.cliente.component';
 
 
 
@@ -18,12 +22,16 @@ import { AppRoutingModule } from '../app-routing.module';
     ComprasComponent,
     CrearCompraComponent,
     EditarCompraComponent,
-    VerCompraComponent
+    VerCompraComponent,
+    CrearClienteComponent,
+    EditarClienteComponent,
+    VerClienteComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   exports:[
     ArticulosComponent,
@@ -31,7 +39,10 @@ import { AppRoutingModule } from '../app-routing.module';
     ComprasComponent,
     CrearCompraComponent,
     EditarCompraComponent,
-    VerCompraComponent
+    VerCompraComponent,
+    CrearClienteComponent,
+    EditarClienteComponent,
+    VerClienteComponent
   ]
 })
 export class TiendaModule { }

@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TiendaModule } from './tienda/tienda.module';
 import { MenuModule } from './shared/menu.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ClienteService } from './service/cliente.service';
 import { FormsModule } from '@angular/forms';
 import { ComprasService } from './service/compras.service';
 
