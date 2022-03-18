@@ -1,0 +1,64 @@
+<form (ngSubmit)="agregar()">
+  <div class="card mb-2">
+    <h1 class="card-header">Nuevo cliente</h1>
+    <div class="card-body">
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Código de cliente</label>
+        <div class="col-sm-8">
+          <input type="number" name="codCliente" placeholder="Código de cliente" [(ngModel)]="nuevoCliente.codCliente">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-8">
+          <input name="nombre" placeholder="Nombre" [(ngModel)]="nuevoCliente.nombre">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Empresa</label>
+        <div class="col-sm-8">
+          <input type="text" name="empresa" placeholder="Empresa" [(ngModel)]="nuevoCliente.empresa">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Puesto</label>
+        <div class="col-sm-8">
+          <input type="text" name="puesto" placeholder="Puesto" [(ngModel)]="nuevoCliente.puesto">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">C.P</label>
+        <div class="col-sm-8">
+          <input type="text" name="cp" placeholder="C.P" [(ngModel)]="nuevoCliente.cp">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Provincia</label>
+        <div class="col-sm-8">
+          <input type="text" name="provincia" placeholder="Provincia" [(ngModel)]="nuevoCliente.provincia">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Teléfono</label>
+        <div class="col-sm-8">
+          <input type="text" name="telefono" placeholder="Teléfono" [(ngModel)]="nuevoCliente.telefono">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-2 col-form-label">Provincia</label>
+        <div class="col-sm-8">
+          <input type="date" name="fecha" placeholder="Fecha de nacimineto" [(ngModel)]="nuevoCliente.fechaNacimiento">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button>Agregar</button>
+</form>
