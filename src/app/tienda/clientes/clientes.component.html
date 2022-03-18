@@ -1,1 +1,26 @@
-<p>clientes works!</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Codódigo de Cliente</th>
+      <th>Nombre</th>
+      <th>Empresa</th>
+      <th>Puesto</th>
+      <th>Provincia</th>
+      <th>Teléfono</th>
+      <th>Fecha de nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes;let i=index">
+      <td>{{cliente.codCliente}}</td>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.empresa}}</td>
+      <td>{{cliente.puesto}}</td>
+      <td>{{cliente.cp}}</td>
+      <td>{{cliente.provincia}}</td>
+      <td>{{cliente.telefono}}</td>
+      <td>{{cliente.fechaNacimiento}}</td>
+    </tr>
+  </tbody>
+</table>
+
