@@ -8,7 +8,7 @@ export class ClienteService {
 
   clientes: Cliente[] = [
     {
-      codCliente: 1001,
+      codCliente: 1,
       nombre: 'Marianico el Corto',
       empresa: 'No te rías que es peor',
       puesto: 'Humorista',
@@ -18,7 +18,7 @@ export class ClienteService {
       fechaNacimiento: new Date()
     },
     {
-      codCliente: 1002,
+      codCliente: 2,
       nombre: 'Elena Nito del Bosque',
       empresa: 'Construcciones el Enanito',
       puesto: 'Carpintero',
@@ -28,7 +28,7 @@ export class ClienteService {
       fechaNacimiento: new Date()
     },
     {
-      codCliente: 1003,
+      codCliente: 3,
       nombre: 'Perico Los Palotes',
       empresa: 'Empresa de Perico',
       puesto: 'Carnicero',
@@ -47,8 +47,12 @@ export class ClienteService {
     this.clientes.push(cliente);
   }
 
-  detalleCliente(codigoCliente: number): Cliente{
-    return this.clientes[codigoCliente];
+  detalleCliente(id: number): Cliente{
+    return this.clientes[id-1];
+  }
+
+  editarCliente(id: number, cliente: Cliente){
+    this.clientes[id-1] == cliente;
   }
 
   constructor() { }

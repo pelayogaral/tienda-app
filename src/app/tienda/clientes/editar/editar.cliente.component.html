@@ -1,1 +1,58 @@
-<p>editar works!</p>
+<form (ngSubmit)="editarCliente()">
+  <div class="card mb-2">
+    <h1 class="card-header">Editar cliente</h1>
+    <div class="card-body">
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">Nombre</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre" [(ngModel)]="cliente.nombre">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">Empresa</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="empresa" placeholder="Empresa" [(ngModel)]="cliente.empresa">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">Puesto</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="puesto" placeholder="Puesto" [(ngModel)]="cliente.puesto">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">C.P.</label>
+        <div class="col-sm-8">
+          <input type="number" class="form-control" name="cp" placeholder="Código postal" [(ngModel)]="cliente.cp">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">Provincia</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="provincia" placeholder="Provincia" [(ngModel)]="cliente.provincia">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">Teléfono</label>
+        <div class="col-sm-8">
+          <input type="number" class="form-control" name="telefono" placeholder="Teléfono" [(ngModel)]="cliente.telefono">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <label class="col-sm-4 col-form-label">Fecha de nacimiento</label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" name="fechaNacimiento" placeholder="Fecha de nacimiento" [(ngModel)]="cliente.fechaNacimiento">
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <button type="submit" class="btn btn-success">Editar</button>
+    </div>
+  </div>
+</form>

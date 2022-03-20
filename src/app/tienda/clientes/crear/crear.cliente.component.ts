@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { ClienteService } from 'src/app/service/cliente.service';
 import { Cliente } from '../../interfaces/cliente.interface';
 
@@ -23,7 +24,7 @@ export class CrearClienteComponent implements OnInit {
 
   @Output() onNuevoCliente: EventEmitter<Cliente> = new EventEmitter();
 
-  constructor(private clienteService: ClienteService) { }
+  constructor(private clienteService: ClienteService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -44,6 +45,8 @@ export class CrearClienteComponent implements OnInit {
       telefono: 0,
       fechaNacimiento: new Date()
     };
+
+    this.router.navigate(['clientes']);
   }
 
 }
