@@ -1,4 +1,4 @@
-<div class="container mt-2">
+
 <div id="tabla" *ngIf="(!editar && !crear && !ver)">
   <div style="float:right;">
     <a class="btn btn-success" routerLink="crear-compra"><i class="bi bi-plus-circle" ></i> Nueva compra</a>
@@ -32,21 +32,4 @@
   </tbody>
 </table>
 </div>
-<div id="crear" *ngIf="(!editar && crear && !ver)">
-  <div class="form-group row">
-<app-crear-compra>
 
-</app-crear-compra>
-
-</div>
-<div class="text-center">
-  <button class="btn btn-success" (click)="salir()">Salir</button>
-</div>
-</div>
-<div id="editar" *ngIf="(editar && !crear && !ver)">
-
-</div>
-<div id="ver" *ngIf="(!editar && !crear && ver)">
-
-</div>
-</div>
